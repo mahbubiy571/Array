@@ -145,3 +145,129 @@
 //   console.log(generateArray(5, 2, 3));
 
 
+// Array3. n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+// 1-usul
+
+// let arr = [1, 4, 6, 8, 9, 2, 5];
+// let reversed = [];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     reversed.push(arr[i]);
+// }
+// console.log(reversed);
+
+// 2-usul
+
+// let arr = [1, 4, 6, 8, 9, 2, 5];
+// let reversed = arr.slice().reverse();
+// console.log(reversed);
+
+
+// Array4. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini indekslari o'sish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
+// Massiv elementlar: 4 5 7 8 6 9
+// Natija: 5 7 9 toqlar soni = 3
+
+// let arr = [4, 5, 7, 8, 6, 9];
+// let newarr = [];
+// let newarrlength = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 == 1) {
+//         newarr.push(arr[i]);
+//         newarrlength++;
+//     }
+// }
+// console.log(newarr, `toqlar soni ${newarrlength} ta`);
+
+
+// Array5. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juftlarini indekslari o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan toqlarini indekslari kamayish tartibida chiqaruvchi programma tuzilsin.
+// Massiv elementlar: 4 5 7 8 6 9
+// Natija: 4 8 6 9 7 5
+
+// let arr = [4, 5, 7, 8, 6, 9];
+// let newarr = [];
+// for(let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 == 0) {
+//         newarr.push(arr[i]);
+//     }
+// }
+// for(let i = arr.length - 1; i >= 0; i--){
+//     if(arr[i] % 2 == 1) {
+//         newarr.push(arr[i]);
+//     }
+// }
+// console.log(newarr);
+
+// Array6. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[0], A[2], A[4], ... Shart operatori ishlatilmasin.
+
+// let arr = [4, 5, 7, 8, 6, 9];
+// let newarr = [];
+// for (let i = 0; i < arr.length; i+=2) {
+//   newarr.push(arr[i]);
+// }
+// console.log(newarr);
+
+
+// Array7. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[n-1], A[n-3], ... A[1]. Shart operatori ishlatilmasin.
+
+// let arr = [4, 5, 7, 8, 6, 9];
+// let newarr = [];
+// for (let i = arr.length - 2; i >= 0; i-=2) {
+//   newarr.push(arr[i]);
+// }
+// console.log(newarr);
+
+
+// Array8. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft indekslilarini keyin toq indekslilarini chiqaruvchi programma tuzilsin.
+// A[0], A[2], A[4], ... A[1], A[3], A[5],.... Shart operatori ishlatilmasin
+
+// let arr = [4, 5, 7, 8, 6, 9];
+// let newarr = [];
+// for (let i = 0; i < arr.length; i+=2) {
+//   newarr.push(arr[i]);
+// }
+// for (let i = 1; i < arr.length; i+=2) {
+//     newarr.push(arr[i]);
+//   }
+// console.log(newarr);
+
+
+// Array9. n ta elementdan tashkil topgan massiv berilgan (n juft son). Dastlab massiv elementlari orasidan toq indekslilarini o'shish tartibida keyin juft indekslilarini kamayish tartibida chiqaruvchi programma tuzilsin. A[1], A[3], A[5],.. A[6], A[4], A[2], A[0]. Shart operatori ishlatilmasin.
+
+// let arr = [4, 5, 7, 8, 6, 9, 12];
+// let newarr = [];
+// for (let i = 1; i < arr.length; i+=2) {
+//     newarr.push(arr[i]);
+//   }
+// for (let i = arr.length - 1; i >= 0; i-=2) {
+//     newarr.push(arr[i]);
+// }
+// console.log(newarr);
+
+
+// Array10. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quyidagicha chiqaruvchi programma tuzilsin. A[0], A[1], A[n-1], A[n-2], A[2], A[3], A[n-3], A[n-4], ...
+
+// let arr = [10, 20, 30, 40, 50, 60, 70, 80];
+// let result = [];
+// let left = 0;
+// let right = arr.length - 1;
+// while (left < right) {
+//     result.push(arr[left++]);
+//     result.push(arr[left++]);
+//     result.push(arr[right--]);
+//     result.push(arr[right--]);
+// }
+// console.log(result);
+
+
+// Array11. N ta elementdan tashkil topgan arr nomli massiv va K, L butun sonlari berilgan. (0 <= K <= L < N). Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini qaytaruvchi rangeOutSum(arr) nomli funksiya tuzilsin.
+
+// function  rangeOutSum(arr, K, L) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(i != K && i != L) {
+//             sum += arr[i];
+//         }
+//     }
+//     return sum;
+// }
+// let arr = [1, 2, 3, 4, 5, 6];
+// console.log(rangeOutSum(arr, 2, 4));
