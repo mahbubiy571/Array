@@ -115,3 +115,33 @@
 
 //                                                  UYGA VAZIFA
 
+// Array1. n natural soni berilgan. 2 sonining dastlabki n ta darajasidan tashkil topgan massivni qaytaruvchi getLevel2(n) nomli funksiya tuzing.
+// Input: 5
+// Output: [2, 4, 8, 16, 32]
+
+// function getLevel2(n) {
+// let arr = [];
+// for(let i = 1; i <= 5; i++) {
+//    arr.push(n**i)
+//   }
+//   return arr;
+// }
+// console.log(getLevel2(2));
+
+
+// Array2. n natural soni va A, B butun sonlari berilgan (n > 2). a[0] = A; a[1] = B; boshqa elementlari o'zidan oldingi barcha elementlari yig'indisiga teng bo'lgan massivni hosil qiling va elementlarini chiqaring.
+// Input: n = 5, A = 2, B = 3
+// Output: [2, 3, 5, 10, 20]
+
+// function generateArray(n, A, B) {
+//     let arr = [A, B];
+//     let sum = A + B;
+//     for (let i = 2; i < n; i++) {
+//       arr.push(sum);
+//       sum += arr[i];
+//     }
+//     return arr;
+//   }
+//   console.log(generateArray(5, 2, 3));
+
+
